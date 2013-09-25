@@ -7,22 +7,29 @@ Who needs this?
 ===============
 
 --If you have mutliple .tex files and use includes and inputs to source the files
+
 --If you need to combine these files into one file for submission
+
 --If you anticipate having to combine files more than once, after revising the original .tex files
 
 Features
 ========
 
 --Parses includes and inputs recursively
+
 --Preserves lines and whitespace as originally written
+
 --Removes whole line comments (does not remove inline comments, and you deserve to have the editors see your comment curses at the reviewers if you're commenting inline!)
+
 --Saves one tex file to current working directory
+
 --Automatically makes your paper more interesting to Nature editors (beta)
 
 Requirements
 ============
 
 --Working Python 2 (tested on 2.7.5 from MacPorts on OS X 10.8.5 (12F37))
+
 --Requires the following modules: os, re, sys
 
 Usage
@@ -33,7 +40,9 @@ Backup your stuff. And then back it up again. And then print it out and put it i
 Drop texsubmit.tex in your folder of beautiful LaTeX code for that important manuscript. 
 
 --Must be run from source directory
+
 --Run command is 'python texsubmit.py toptexfile.tex' where 'toptexfile.tex' is your top level LaTeX file.
+
 --If there are no errors, the output will be saved in the current working directory as toptexfile-submit.tex
 
 To check to see if it worked you can always try:
@@ -54,6 +63,24 @@ which should result in the file toptexfile-submit.pdf. Enjoy.
 
 Example
 =======
+
+To run the example, you need GNU Make. To compile the original, run:
+
+make
+
+The output of this is example0.pdf. You can use this for comparison. Then run:
+
+make texsubmit
+
+The output will be example0-texsubmit.pdf.
+
+You can also clean the directory with:
+
+make clean
+
+
+A Real Example:
+===========
 
 After moving texsubmit.py into /Users/yourusername/sandbox/thisiswheremytexis, go into that folder and run:
 
