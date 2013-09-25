@@ -1,0 +1,15 @@
+% Either use Makefile -or-
+% Run: python texsubmit.py example0.tex
+% output is: example0-texsubmit.tex
+% simple compile with pdflatex example0-texsubmit.tex
+%   to create example0-texsubmit.pdf
+
+\documentclass{article}
+
+\begin{document}
+  Welcome to \TeX Submit!
+  % this comment line will be ignored and not appear in the final file
+
+  \input{example1}
+  \include{example3}
+\end{document}
